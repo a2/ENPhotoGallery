@@ -247,6 +247,8 @@
 		__strong __typeof(&*weakSelf) blockSelf = weakSelf;
 		if (error || !image) return;
 		
+		blockSelf.image = image;
+		
 		[activityIndicator removeFromSuperview];
 		
 		CGFloat widthScale = image.size.width / CGRectGetWidth(blockSelf.photoItemView.bounds);

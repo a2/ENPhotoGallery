@@ -201,21 +201,18 @@
 
 #pragma mark - UIViewController
 
-- (void)loadView
+- (void)viewDidLoad
 {
-	UIView *view = [[UIView alloc] initWithFrame:UIScreen.mainScreen.bounds];
-	view.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	view.backgroundColor = [UIColor blackColor];
-	self.view = view;
+	self.view.backgroundColor = [UIColor blackColor];
 	
-	ENPhotoGalleryView *photoGallery = [[ENPhotoGalleryView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+	ENPhotoGalleryView *photoGallery = [[ENPhotoGalleryView alloc] initWithFrame:self.view.bounds];
 	photoGallery.dataSource = self.dataSource ?: self;
 	photoGallery.delegate = self;
 	
 	[self.view addSubview:photoGallery];
 	self.photoGallery = photoGallery;
 	
-	self.statusBarHidden = [UIApplication sharedApplication].statusBarHidden;
+	self.statusBarHidden = UIApplication.sharedApplication.statusBarHidden;
 	self.controlViewHidden = NO;
 	
 	[self configureTopBar];
