@@ -15,7 +15,7 @@ typedef NS_ENUM(NSUInteger, ENPhotoGalleryMode) {
 };
 
 typedef NS_ENUM(NSUInteger, ENPhotoCaptionStyle) {
-    ENPhotoCaptionStylePlainText = 0,
+    ENPhotoCaptionStyleText = 0,
     ENPhotoCaptionStyleAttributedText,
     ENPhotoCaptionStyleCustomView
 };

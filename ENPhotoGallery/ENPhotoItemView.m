@@ -59,7 +59,7 @@
 	ENPhotoCaptionView *photoCaptionView;
 	
     switch (captionStyle) {
-        case ENPhotoCaptionStylePlainText:
+        case ENPhotoCaptionStyleText:
             photoCaptionView = [[ENPhotoCaptionView alloc] initWithFrame:self.frame text:captionItem];
             break;
             

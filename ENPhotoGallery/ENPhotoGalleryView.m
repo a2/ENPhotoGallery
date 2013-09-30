@@ -88,7 +88,7 @@
     id captionItem = nil;
     
     switch (_captionStyle) {
-        case ENPhotoCaptionStylePlainText:
+        case ENPhotoCaptionStyleText:
             if ([_dataSource respondsToSelector:@selector(photoGallery:captionAtIndex:)]) {
                 captionItem = [_dataSource photoGallery:self captionAtIndex:index];
             }
@@ -228,7 +228,7 @@
 - (void)initDefaults
 {
     _galleryMode = ENPhotoGalleryModeImageLocal;
-    _captionStyle = ENPhotoCaptionStylePlainText;
+    _captionStyle = ENPhotoCaptionStyleText;
     _subviewGap = kDefaultSubviewGap;
     _peakSubview = NO;
     _showsScrollIndicator = YES;
