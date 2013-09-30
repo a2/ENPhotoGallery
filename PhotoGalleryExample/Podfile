@@ -1,0 +1,4 @@
+platform :ios, '7.0'
+
+pod 'AFNetworking/NSURLSession', '2.0'
+pod 'AFNetworking/UIKit', '2.0'

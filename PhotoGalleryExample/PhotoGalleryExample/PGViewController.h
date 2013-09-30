@@ -7,17 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIPhotoGalleryView.h"
+#import "ENPhotoGalleryView.h"
 
-@class UIPhotoGalleryViewController;
+@class ENPhotoGalleryViewController;
 
-@interface PGViewController : UIViewController<UIPhotoGalleryDataSource, UIPhotoGalleryDelegate> {
-    IBOutlet UIPhotoGalleryView *vPhotoGallery;
+@interface PGViewController : UIViewController<ENPhotoGalleryDataSource, ENPhotoGalleryDelegate> {
+    IBOutlet ENPhotoGalleryView *vPhotoGallery;
     IBOutlet UIScrollView *scrollView;
     IBOutlet UIImageView *img1;
     IBOutlet UIImageView *img2;
     
-    UIPhotoGalleryViewController *photoGalleryVC;
+    ENPhotoGalleryViewController *photoGalleryVC;
 }
 
 - (IBAction)btnFullscreenPressed:(UIButton *)sender;

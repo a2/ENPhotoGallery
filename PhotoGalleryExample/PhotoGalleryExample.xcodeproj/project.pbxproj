@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00C030A217FA1FB100141D97 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C030A117FA1FB100141D97 /* SystemConfiguration.framework */; };
+		00C030A417FA1FB900141D97 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C030A317FA1FB900141D97 /* MobileCoreServices.framework */; };
+		00C030A617FA203900141D97 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C030A517FA203900141D97 /* Security.framework */; };
 		AAE6812B174F1489009EBB9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE6812A174F1489009EBB9D /* UIKit.framework */; };
 		AAE6812D174F1489009EBB9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE6812C174F1489009EBB9D /* Foundation.framework */; };
 		AAE6812F174F1489009EBB9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE6812E174F1489009EBB9D /* CoreGraphics.framework */; };
@@ -16,10 +19,8 @@
 		AAE6813D174F1489009EBB9D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AAE6813C174F1489009EBB9D /* Default.png */; };
 		AAE6813F174F1489009EBB9D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAE6813E174F1489009EBB9D /* Default@2x.png */; };
 		AAE68141174F1489009EBB9D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAE68140174F1489009EBB9D /* Default-568h@2x.png */; };
-		AAE6814D174F14DD009EBB9D /* UIPhotoGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE6814A174F14DD009EBB9D /* UIPhotoGalleryView.m */; };
-		AAE6814E174F14DD009EBB9D /* UIPhotoItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE6814C174F14DD009EBB9D /* UIPhotoItemView.m */; };
-		AAE68150174F14E2009EBB9D /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE6814F174F14E2009EBB9D /* SDWebImage.framework */; };
-		AAE68152174F14F7009EBB9D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE68151174F14F7009EBB9D /* ImageIO.framework */; };
+		AAE6814D174F14DD009EBB9D /* ENPhotoGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE6814A174F14DD009EBB9D /* ENPhotoGalleryView.m */; };
+		AAE6814E174F14DD009EBB9D /* ENPhotoItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE6814C174F14DD009EBB9D /* ENPhotoItemView.m */; };
 		AAE68156174F1530009EBB9D /* PGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE68154174F1530009EBB9D /* PGViewController.m */; };
 		AAE68157174F1530009EBB9D /* PGViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAE68155174F1530009EBB9D /* PGViewController.xib */; };
 		AAE68165174F23B8009EBB9D /* sample0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAE6815A174F23B8009EBB9D /* sample0.jpg */; };
@@ -33,10 +34,15 @@
 		AAE6816D174F23B8009EBB9D /* sample7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAE68162174F23B8009EBB9D /* sample7.jpg */; };
 		AAE6816E174F23B8009EBB9D /* sample8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAE68163174F23B8009EBB9D /* sample8.jpg */; };
 		AAE6816F174F23B8009EBB9D /* sample9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAE68164174F23B8009EBB9D /* sample9.jpg */; };
-		AAE68172174F45A1009EBB9D /* UIPhotoGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE68171174F45A1009EBB9D /* UIPhotoGalleryViewController.m */; };
+		AAE68172174F45A1009EBB9D /* ENPhotoGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE68171174F45A1009EBB9D /* ENPhotoGalleryViewController.m */; };
+		F339F5DF07A44780A13EEA80 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6170DAF0F044428680D977F0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00C030A117FA1FB100141D97 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		00C030A317FA1FB900141D97 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		00C030A517FA203900141D97 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6170DAF0F044428680D977F0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAE68127174F1489009EBB9D /* PhotoGalleryExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGalleryExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAE6812A174F1489009EBB9D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AAE6812C174F1489009EBB9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,12 +56,10 @@
 		AAE6813C174F1489009EBB9D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		AAE6813E174F1489009EBB9D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AAE68140174F1489009EBB9D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		AAE68149174F14DD009EBB9D /* UIPhotoGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPhotoGalleryView.h; sourceTree = "<group>"; };
-		AAE6814A174F14DD009EBB9D /* UIPhotoGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPhotoGalleryView.m; sourceTree = "<group>"; };
-		AAE6814B174F14DD009EBB9D /* UIPhotoItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPhotoItemView.h; sourceTree = "<group>"; };
-		AAE6814C174F14DD009EBB9D /* UIPhotoItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPhotoItemView.m; sourceTree = "<group>"; };
-		AAE6814F174F14E2009EBB9D /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Vendors/SDWebImage.framework; sourceTree = SOURCE_ROOT; };
-		AAE68151174F14F7009EBB9D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		AAE68149174F14DD009EBB9D /* ENPhotoGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENPhotoGalleryView.h; sourceTree = "<group>"; };
+		AAE6814A174F14DD009EBB9D /* ENPhotoGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENPhotoGalleryView.m; sourceTree = "<group>"; };
+		AAE6814B174F14DD009EBB9D /* ENPhotoItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENPhotoItemView.h; sourceTree = "<group>"; };
+		AAE6814C174F14DD009EBB9D /* ENPhotoItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENPhotoItemView.m; sourceTree = "<group>"; };
 		AAE68153174F1530009EBB9D /* PGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGViewController.h; sourceTree = "<group>"; };
 		AAE68154174F1530009EBB9D /* PGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGViewController.m; sourceTree = "<group>"; };
 		AAE68155174F1530009EBB9D /* PGViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PGViewController.xib; sourceTree = "<group>"; };
@@ -70,8 +74,9 @@
 		AAE68162174F23B8009EBB9D /* sample7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample7.jpg; sourceTree = "<group>"; };
 		AAE68163174F23B8009EBB9D /* sample8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample8.jpg; sourceTree = "<group>"; };
 		AAE68164174F23B8009EBB9D /* sample9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample9.jpg; sourceTree = "<group>"; };
-		AAE68170174F45A1009EBB9D /* UIPhotoGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPhotoGalleryViewController.h; sourceTree = "<group>"; };
-		AAE68171174F45A1009EBB9D /* UIPhotoGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPhotoGalleryViewController.m; sourceTree = "<group>"; };
+		AAE68170174F45A1009EBB9D /* ENPhotoGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ENPhotoGalleryViewController.h; sourceTree = "<group>"; };
+		AAE68171174F45A1009EBB9D /* ENPhotoGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ENPhotoGalleryViewController.m; sourceTree = "<group>"; };
+		BAA2F4ABD017416AA661B08B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,11 +84,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAE68152174F14F7009EBB9D /* ImageIO.framework in Frameworks */,
+				00C030A617FA203900141D97 /* Security.framework in Frameworks */,
+				00C030A417FA1FB900141D97 /* MobileCoreServices.framework in Frameworks */,
+				00C030A217FA1FB100141D97 /* SystemConfiguration.framework in Frameworks */,
 				AAE6812B174F1489009EBB9D /* UIKit.framework in Frameworks */,
 				AAE6812D174F1489009EBB9D /* Foundation.framework in Frameworks */,
 				AAE6812F174F1489009EBB9D /* CoreGraphics.framework in Frameworks */,
-				AAE68150174F14E2009EBB9D /* SDWebImage.framework in Frameworks */,
+				F339F5DF07A44780A13EEA80 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +103,7 @@
 				AAE68129174F1489009EBB9D /* Frameworks */,
 				AAE68130174F1489009EBB9D /* PhotoGalleryExample */,
 				AAE68128174F1489009EBB9D /* Products */,
+				BAA2F4ABD017416AA661B08B /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,9 +118,13 @@
 		AAE68129174F1489009EBB9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00C030A517FA203900141D97 /* Security.framework */,
+				00C030A317FA1FB900141D97 /* MobileCoreServices.framework */,
+				00C030A117FA1FB100141D97 /* SystemConfiguration.framework */,
 				AAE6812A174F1489009EBB9D /* UIKit.framework */,
 				AAE6812C174F1489009EBB9D /* Foundation.framework */,
 				AAE6812E174F1489009EBB9D /* CoreGraphics.framework */,
+				6170DAF0F044428680D977F0 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -127,8 +139,7 @@
 				AAE68155174F1530009EBB9D /* PGViewController.xib */,
 				AAE68158174F23B8009EBB9D /* Resources */,
 				AAE68131174F1489009EBB9D /* Supporting Files */,
-				AAE68148174F14DD009EBB9D /* UIPhotoGallery */,
-				AAE68147174F14D2009EBB9D /* Vendors */,
+				AAE68148174F14DD009EBB9D /* ENPhotoGallery */,
 			);
 			path = PhotoGalleryExample;
 			sourceTree = "<group>";
@@ -147,27 +158,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AAE68147174F14D2009EBB9D /* Vendors */ = {
+		AAE68148174F14DD009EBB9D /* ENPhotoGallery */ = {
 			isa = PBXGroup;
 			children = (
-				AAE68151174F14F7009EBB9D /* ImageIO.framework */,
-				AAE6814F174F14E2009EBB9D /* SDWebImage.framework */,
+				AAE68149174F14DD009EBB9D /* ENPhotoGalleryView.h */,
+				AAE6814A174F14DD009EBB9D /* ENPhotoGalleryView.m */,
+				AAE68170174F45A1009EBB9D /* ENPhotoGalleryViewController.h */,
+				AAE68171174F45A1009EBB9D /* ENPhotoGalleryViewController.m */,
+				AAE6814B174F14DD009EBB9D /* ENPhotoItemView.h */,
+				AAE6814C174F14DD009EBB9D /* ENPhotoItemView.m */,
 			);
-			name = Vendors;
-			sourceTree = "<group>";
-		};
-		AAE68148174F14DD009EBB9D /* UIPhotoGallery */ = {
-			isa = PBXGroup;
-			children = (
-				AAE68149174F14DD009EBB9D /* UIPhotoGalleryView.h */,
-				AAE6814A174F14DD009EBB9D /* UIPhotoGalleryView.m */,
-				AAE68170174F45A1009EBB9D /* UIPhotoGalleryViewController.h */,
-				AAE68171174F45A1009EBB9D /* UIPhotoGalleryViewController.m */,
-				AAE6814B174F14DD009EBB9D /* UIPhotoItemView.h */,
-				AAE6814C174F14DD009EBB9D /* UIPhotoItemView.m */,
-			);
-			name = UIPhotoGallery;
-			path = ../../UIPhotoGallery;
+			name = ENPhotoGallery;
+			path = ../../ENPhotoGallery;
 			sourceTree = "<group>";
 		};
 		AAE68158174F23B8009EBB9D /* Resources */ = {
@@ -203,9 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAE68144174F1489009EBB9D /* Build configuration list for PBXNativeTarget "PhotoGalleryExample" */;
 			buildPhases = (
+				39779BBD6EF64A69A3C61C85 /* Check Pods Manifest.lock */,
 				AAE68123174F1489009EBB9D /* Sources */,
 				AAE68124174F1489009EBB9D /* Frameworks */,
 				AAE68125174F1489009EBB9D /* Resources */,
+				48FE207F96904A3F8E4C0AAB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,6 +272,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		39779BBD6EF64A69A3C61C85 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		48FE207F96904A3F8E4C0AAB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AAE68123174F1489009EBB9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -275,10 +312,10 @@
 			files = (
 				AAE68137174F1489009EBB9D /* main.m in Sources */,
 				AAE6813B174F1489009EBB9D /* PGAppDelegate.m in Sources */,
-				AAE6814D174F14DD009EBB9D /* UIPhotoGalleryView.m in Sources */,
-				AAE6814E174F14DD009EBB9D /* UIPhotoItemView.m in Sources */,
+				AAE6814D174F14DD009EBB9D /* ENPhotoGalleryView.m in Sources */,
+				AAE6814E174F14DD009EBB9D /* ENPhotoItemView.m in Sources */,
 				AAE68156174F1530009EBB9D /* PGViewController.m in Sources */,
-				AAE68172174F45A1009EBB9D /* UIPhotoGalleryViewController.m in Sources */,
+				AAE68172174F45A1009EBB9D /* ENPhotoGalleryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,15 +393,12 @@
 		};
 		AAE68145174F1489009EBB9D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAA2F4ABD017416AA661B08B /* Pods.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Vendors\"",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoGalleryExample/PhotoGalleryExample-Prefix.pch";
 				INFOPLIST_FILE = "PhotoGalleryExample/PhotoGalleryExample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -373,15 +407,12 @@
 		};
 		AAE68146174F1489009EBB9D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAA2F4ABD017416AA661B08B /* Pods.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Vendors\"",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhotoGalleryExample/PhotoGalleryExample-Prefix.pch";
 				INFOPLIST_FILE = "PhotoGalleryExample/PhotoGalleryExample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

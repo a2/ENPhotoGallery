@@ -7,7 +7,6 @@
 //
 
 #import "PGAppDelegate.h"
-#import <SDWebImage/SDImageCache.h>
 #import "PGViewController.h"
 
 @implementation PGAppDelegate
@@ -20,10 +19,6 @@
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:[[PGViewController alloc] init]];
     
     self.window.rootViewController = navVC;
-    
-    [[SDImageCache sharedImageCache] clearDisk];
-    [[SDImageCache sharedImageCache] cleanDisk];
-    [[SDImageCache sharedImageCache] clearMemory];
     
     [self.window makeKeyAndVisible];
     return YES;

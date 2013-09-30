@@ -7,8 +7,8 @@
 //
 
 #import "PGViewController.h"
-#import "UIPhotoGalleryView.h"
-#import "UIPhotoGalleryViewController.h"
+#import "ENPhotoGalleryView.h"
+#import "ENPhotoGalleryViewController.h"
 
 @interface PGViewController () {
     NSArray *sampleURLs;
@@ -39,20 +39,20 @@
                    ];
 }
 
-#pragma UIPhotoGalleryDataSource methods
-- (NSInteger)numberOfViewsInPhotoGallery:(UIPhotoGalleryView *)photoGallery {
+#pragma ENPhotoGalleryDataSource methods
+- (NSInteger)numberOfViewsInPhotoGallery:(ENPhotoGalleryView *)photoGallery {
     return 10;
 }
 
-- (UIImage*)photoGallery:(UIPhotoGalleryView*)photoGallery localImageAtIndex:(NSInteger)index {
+- (UIImage*)photoGallery:(ENPhotoGalleryView*)photoGallery localImageAtIndex:(NSInteger)index {
     return [UIImage imageNamed:[NSString stringWithFormat:@"sample%d.jpg", index % 10]];
 }
 
-- (NSURL*)photoGallery:(UIPhotoGalleryView *)photoGallery remoteImageURLAtIndex:(NSInteger)index {
+- (NSURL*)photoGallery:(ENPhotoGalleryView *)photoGallery remoteImageURLAtIndex:(NSInteger)index {
     return sampleURLs[index % 10];
 }
 
-- (UIView*)photoGallery:(UIPhotoGalleryView *)photoGallery customViewAtIndex:(NSInteger)index {
+- (UIView*)photoGallery:(ENPhotoGalleryView *)photoGallery customViewAtIndex:(NSInteger)index {
     CGRect frame = CGRectMake(0, 0, photoGallery.frame.size.width, photoGallery.frame.size.height);
     UIView *view = [[UIView alloc] initWithFrame:frame];
     view.backgroundColor = [UIColor whiteColor];
@@ -65,11 +65,11 @@
     return view;
 }
 
-- (NSString*)photoGallery:(UIPhotoGalleryView *)photoGallery plainTextCaptionAtIndex:(NSInteger)index {
+- (NSString*)photoGallery:(ENPhotoGalleryView *)photoGallery captionAtIndex:(NSInteger)index {
     return sampleURLs[index % 10];
 }
 
-- (NSAttributedString*)photoGallery:(UIPhotoGalleryView *)photoGallery attributedTextCaptionAtIndex:(NSInteger)index {
+- (NSAttributedString*)photoGallery:(ENPhotoGalleryView *)photoGallery attributedCaptionAtIndex:(NSInteger)index {
     NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:sampleURLs[index]];
     [attributedText addAttribute:NSBackgroundColorAttributeName value:[UIColor yellowColor] range:NSMakeRange(3,5)];
     [attributedText addAttribute:NSForegroundColorAttributeName value:[UIColor greenColor] range:NSMakeRange(10,7)];
@@ -79,14 +79,14 @@
     return attributedText;
 }
 
-- (UIView*)photoGallery:(UIPhotoGalleryView *)photoGallery customViewCaptionAtIndex:(NSInteger)index {
+- (UIView*)photoGallery:(ENPhotoGalleryView *)photoGallery customViewForCaptionAtIndex:(NSInteger)index {
     UILabel *customView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 30)];
     customView.text = sampleURLs[index];
     
     return customView;
 }
 
-//- (UIView*)customTopViewForGalleryViewController:(UIPhotoGalleryViewController *)galleryViewController {
+//- (UIView*)customTopViewForGalleryViewController:(ENPhotoGalleryViewController *)galleryViewController {
 //    CGFloat width = MIN([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
 //    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 40)];
 //    topView.backgroundColor = [UIColor whiteColor];
@@ -103,11 +103,11 @@
 //    return topView;
 //}
 
-- (UIView*)customTopViewForGalleryViewController:(UIPhotoGalleryViewController *)galleryViewController {
+- (UIView*)customTopViewForGalleryViewController:(ENPhotoGalleryViewController *)galleryViewController {
     return nil;
 }
 
-//- (UIView*)customBottomViewForGalleryViewController:(UIPhotoGalleryViewController *)galleryViewController {
+//- (UIView*)customBottomViewForGalleryViewController:(ENPhotoGalleryViewController *)galleryViewController {
 //    return nil;
 //}
 
@@ -118,30 +118,30 @@
         [photoGalleryVC dismissViewControllerAnimated:YES completion:NULL];
 }
 
-#pragma UIPhotoGalleryDelegate methods
-- (void)photoGallery:(UIPhotoGalleryView *)photoGallery didTapAtIndex:(NSInteger)index {
+#pragma ENPhotoGalleryDelegate methods
+- (void)photoGallery:(ENPhotoGalleryView *)photoGallery didTapAtIndex:(NSInteger)index {
 }
 
-- (UIPhotoGalleryDoubleTapHandler)photoGallery:(UIPhotoGalleryView *)photoGallery doubleTapHandlerAtIndex:(NSInteger)index {
+- (ENPhotoGalleryDoubleTapHandler)photoGallery:(ENPhotoGalleryView *)photoGallery doubleTapHandlerAtIndex:(NSInteger)index {
     switch (photoGallery.galleryMode) {
-        case UIPhotoGalleryModeImageLocal:
-            return UIPhotoGalleryDoubleTapHandlerZoom;
+        case ENPhotoGalleryModeImageLocal:
+            return ENPhotoGalleryDoubleTapHandlerZoom;
             
-        case UIPhotoGalleryModeImageRemote:
-            return UIPhotoGalleryDoubleTapHandlerNone;
+        case ENPhotoGalleryModeImageRemote:
+            return ENPhotoGalleryDoubleTapHandlerNone;
             
         default:
-            return UIPhotoGalleryDoubleTapHandlerCustom;
+            return ENPhotoGalleryDoubleTapHandlerCustom;
     }
 }
 
-- (void)photoGallery:(UIPhotoGalleryView *)photoGallery didDoubleTapAtIndex:(NSInteger)index {
+- (void)photoGallery:(ENPhotoGalleryView *)photoGallery didDoubleTapAtIndex:(NSInteger)index {
     DLog(@"invoke");
 }
 
 - (IBAction)btnFullscreenPressed:(UIButton *)sender {
     if (!photoGalleryVC) {
-        photoGalleryVC = [[UIPhotoGalleryViewController alloc] init];
+        photoGalleryVC = [[ENPhotoGalleryViewController alloc] init];
         photoGalleryVC.dataSource = self;
         photoGalleryVC.showStatusBar = YES;
     }
@@ -155,23 +155,23 @@
 }
 
 - (IBAction)segGalleryModeChanged:(UISegmentedControl *)sender {
-    vPhotoGallery.galleryMode = (UIPhotoGalleryMode)sender.selectedSegmentIndex;
+    vPhotoGallery.galleryMode = (ENPhotoGalleryMode)sender.selectedSegmentIndex;
     
     switch (sender.selectedSegmentIndex) {
-        case UIPhotoGalleryModeImageLocal:
+        case ENPhotoGalleryModeImageLocal:
             vPhotoGallery.subviewGap = 30;
             vPhotoGallery.verticalGallery = NO;
-            vPhotoGallery.peakSubView = YES;
+            vPhotoGallery.peakSubview = YES;
             break;
             
-        case UIPhotoGalleryModeImageRemote:
+        case ENPhotoGalleryModeImageRemote:
             vPhotoGallery.subviewGap = 30;
-            vPhotoGallery.verticalGallery = vPhotoGallery.peakSubView = NO;
+            vPhotoGallery.verticalGallery = vPhotoGallery.peakSubview = NO;
             break;
             
-        case UIPhotoGalleryModeCustomView:
+        case ENPhotoGalleryModeCustomView:
             vPhotoGallery.subviewGap = 50;
-            vPhotoGallery.verticalGallery = vPhotoGallery.peakSubView = YES;
+            vPhotoGallery.verticalGallery = vPhotoGallery.peakSubview = YES;
             break;
             
         default:
