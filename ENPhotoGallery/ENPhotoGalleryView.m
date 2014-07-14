@@ -56,6 +56,9 @@
         contentOffset.x = self.currentPage * self.mainScrollView.frame.size.width;
     
     [self.mainScrollView setContentOffset:contentOffset animated:animation];
+
+    if ([_delegate respondsToSelector:@selector(photoGallery:didMoveToIndex:)])
+        [_delegate photoGallery:self didMoveToIndex:self.currentPage];
     
     return YES;
 }
